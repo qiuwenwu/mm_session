@@ -1,0 +1,37 @@
+{
+  "name": "mm_session",
+  "version": "1.2.2",
+  "description": "这是超级美眉session函数模块，用于web服务端session缓存",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiuwenwu/mm_session.git"
+  },
+  "keywords": [
+    "mysession",
+    "async",
+    "await",
+    "promise",
+    "add",
+    "del",
+    "set",
+    "get",
+    "query",
+    "run",
+    "exec"
+  ],
+  "author": "邱文武",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiuwenwu/mm_session/issues"
+  },
+  "homepage": "https://github.com/qiuwenwu/mm_session#readme",
+  "dependencies": {
+    "mm_cachebase": "^1.2.2",
+    "mm_expand": "^1.2.2"
+  },
+  "devDependencies": {}
+}
