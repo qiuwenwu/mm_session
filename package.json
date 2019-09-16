@@ -30,8 +30,7 @@
   },
   "homepage": "https://github.com/qiuwenwu/mm_session#readme",
   "dependencies": {
-    "mm_cachebase": "^1.2.2",
-    "mm_expand": "^1.2.3"
+    "mm_cachebase": "^1.2.6"
   },
   "devDependencies": {}
 }

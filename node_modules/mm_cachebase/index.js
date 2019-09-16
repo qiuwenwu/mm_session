@@ -202,7 +202,7 @@ class CacheBase {
 			var obj = _this.getObj(key);
 			if (obj) {
 				obj.value = value;
-				if(maxAge !== undefined){
+				if (maxAge !== undefined) {
 					_this.ttl(key, maxAge);
 				}
 			} else {
@@ -372,8 +372,12 @@ class CacheBase {
 		CacheBase.prototype.keys = async function(key) {
 			var _this = this;
 			return new Promise((resolve, reject) => {
-				var list = _this.list.search(key, 'name');
-				resolve(list.toArr('name'));
+				if (key) {
+					var list = _this.list.search(key, 'name');
+					resolve(list.toArr('name'));
+				} else {
+					resolve(_this.list.toArr('name'));
+				}
 			});
 		};
 		/**
