@@ -1,6 +1,6 @@
 {
     "name": "mm_session",
-    "version": "1.3.9",
+    "version": "1.4.0",
     "description": "这是超级美眉session函数模块，用于web服务端session缓存",
     "main": "index.js",
     "scripts": {
@@ -30,7 +30,7 @@
     },
     "homepage": "https://github.com/qiuwenwu/mm_session#readme",
     "dependencies": {
-        "mm_cachebase": "^1.3.8"
+        "mm_cachebase": "^1.3.9"
     },
     "devDependencies": {}
 }
