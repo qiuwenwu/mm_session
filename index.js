@@ -21,7 +21,9 @@ module.exports = (opts = {}) => {
 				}
 			});
 		}
-
+		if (!uuid) {
+			uuid = ctx.headers[$.dict.token];
+		}
 		if (!uuid) {
 			/// 如果没有获到uuid 则为空对象
 			ctx.session = new_session();
