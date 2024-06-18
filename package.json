@@ -1,6 +1,6 @@
 {
     "name": "mm_session",
-    "version": "1.4.1",
+    "version": "1.4.3",
     "description": "这是超级美眉session函数模块，用于web服务端session缓存",
     "main": "index.js",
     "scripts": {

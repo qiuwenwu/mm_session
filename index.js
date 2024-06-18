@@ -2,7 +2,7 @@ const Store = require('./store.js');
 
 module.exports = (opts = {}) => {
 	const {
-		key = $.dict.session_id ? $.dict.session_id : "mm:uuid", store = new Store()
+		key = $.dict.session_id || "mm:uuid", store = new Store()
 	} = opts;
 
 	return async (ctx, next) => {
@@ -81,14 +81,11 @@ module.exports = (opts = {}) => {
 
 		// 建立/更新会话
 		var o = Object.assign({}, opts, {
-			uuid: ctx.session.uuid ? ctx.session.uuid : uuid
+			uuid: ctx.session.uuid || uuid
 		});
 		const sid = await store.set(ctx.session, o, ctx);
 
 		var cg = Object.assign({}, opts);
-		if (cg.maxAge) {
-			cg.maxAge = cg.maxAge * 1000;
-		}
 		if (!uuid || uuid !== sid || need_refresh) ctx.cookies.set(key, sid, cg);
 	}
 }
