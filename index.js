@@ -86,6 +86,9 @@ module.exports = (opts = {}) => {
 		const sid = await store.set(ctx.session, o, ctx);
 
 		var cg = Object.assign({}, opts);
+		if (cg.maxAge) {
+			cg.maxAge = cg.maxAge * 1000;
+		}
 		if (!uuid || uuid !== sid || need_refresh) ctx.cookies.set(key, sid, cg);
 	}
 }
